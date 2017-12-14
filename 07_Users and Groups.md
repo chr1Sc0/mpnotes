@@ -1,4 +1,4 @@
-### Users and Groups
+# Users and Groups
 The users and groups can be configured at the "Administration" level in mPulse.
 
 ### General Properties
