@@ -16,7 +16,6 @@ The following main folders are used to group customers tenants depending on thei
   4. Inactive: When a POC trial time is finished and does not realize into a sale or stops paying the subscription it's moved to this folder. The "Account Status" attribute for the tenant is set to "Suspended" or Expiration date. No user can login to the tenant once it's suspended or expiration date is past due.
 
 ### Properties
-
 The following are the "General" tab properties:
 
   * **Tenant Name:** Unique identifier for a customer account.
