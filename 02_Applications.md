@@ -23,7 +23,7 @@ The boomerang javascript code snippet needs to be copied and instrument the page
 
 The snippet basically creates a hidden iframe and calls a function that loads the boomerang library from mpulse site, adds the js to the iframe HTML and then fires the anonymous function "()" when the "onload" event triggers:
 
-```
+```javascript
 try {
    doc = iframe.contentWindow.document;
  } catch(e) {
@@ -64,7 +64,7 @@ There are other optional parameters that can configured when creating the applic
   - A/B Bucket:  Variable (free text) that can be used for A/B tagging.  A/B testing (also known as split testing or bucket testing) is a method of comparing two versions of a webpage or app against each other to determine which one performs better.
   - Development Server List: List of servers, domain or sites (comma separated) that I want to exclude beacons from. The information entered in this field is not counted into your mPulse data, and it does not appear on your Dashboards.
   - Data Template: Overrides country/region templates from the Tenant settings. Can be set only if the user has the "Tenant Adminstrator" permissions.
-  - Bandwith Test: This is for measuring user bandwith distribution charts. It requires downloading the images from mPulse for and placing them in some web accesible location of the target server
+  - Bandwith Test: This is for measuring user bandwith distribution charts. It requires downloading the images from mPulse for and placing them in some web accesible location of the target server.
 
 ![General Tab](./images/app_general_tab.png)
 
