@@ -1,5 +1,5 @@
 # Beacons
-mPulse is built above the boomerang JavaScript library that collects web performance data from a user’s web browser and sends that back to the mPulse servers on a beacon. The simple definition of a beacon is that it is an HTTP(S) request with a ton of data included either as HTTP headers or as part of the Request’s Query String
+mPulse is built above the boomerang JavaScript library that collects web performance data from a user’s web browser and sends that back to the mPulse servers on a beacon. The simple definition of a beacon is that it is an HTTP(S) request with a ton of data included either as HTTP headers or as part of the Request’s Query String.
 
 mPulse will send beacon data for 100% of all page loads on a web site.  Because mPulse does not sample the data collection of metrics and timers, the margin of error can be kept as small as possible, resulting in a more complete and accurate portrayal of site health.
 
@@ -19,7 +19,7 @@ When an instrumented page is loaded, the network tab of the browser Development 
 1. The first one is a GET call that loads the "boomerang" library using the application key, example:
    `https://c.go-mpulse.net/boomerang/NAV6G-DQJ54-PXW9W-EVUQ9-U2V5R`
 
-2. The second is a GET call (config.js) that also passes the application key on top of a number of parameters like the domain name, boomerange version, application key, session id, mpulse target server, plugins, etc. and it loads the configuration that is specific for this app like page groups, custom metrics, custom timers.
+2. The second is a GET call (config.js) that also passes the application key on top of a number of parameters like the domain name, boomerange version, session id, mpulse target server, plugins, etc. and it loads the configuration that is specific for this app like page groups, custom metrics, custom timers.
 
 3. The third is a POST call that is actually sending all the beacon data to mPulse.
 

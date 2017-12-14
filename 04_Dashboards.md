@@ -21,6 +21,8 @@ The Waterfall dashboard does not show aggregate data but the raw data received o
 
 The latency of Waterfall dashboard is higher and data sent from beacons can take up to 5 mins to be available. Viewing historical data (collected more than 24 hours in the past) in the Waterfall dashboard may also take several minutes to load.
 
+Also, if an extended time filter is selected, like for example spanning for a number of days (say a week), the Waterfall Dashboard will only display beacons for a 60 minute (or shorter) time frame contained in the first chunk of the time interval selected. That is, the beacons that you see in the list in the Beacons widget of the dashboard will be from the first 60 minutes starting from the beginning of the week in the filter you select. It’s highly recommended that you use the ‘between’ option in the Date/Time filter to choose a specific hour in which you know beacons exist.
+
 ### What-If Dashboard
 This dashboard can levarages from the two most important custom metrics to set up for any web app in which customers are able to make purchases, which are:
 

@@ -8,7 +8,7 @@ Due to the SSO integration with Luna, logging with username as password is not p
 
 1.  Generate the API token for the user belonging to the Tenant in "Settings -> My Settings"
 2.  Authenticate with the API token and get the session token:
-    ```
+    ```bash
     # curl -k -X PUT -H "Content-type: application/json" \
     --data-binary '{"apiToken":"7d7352b2-29ac-481e-b401-5e617e7a804a"}' \
     "https://mpulse.soasta.com/concerto/services/rest/RepositoryService/v1/Tokens"
@@ -16,7 +16,7 @@ Due to the SSO integration with Luna, logging with username as password is not p
     ```
 
 3.  Once the session token is received, submit the requests. It's important to provide the session token as authentication header and also provide the correct Tenant ID in the URL For example:
-    ```
+    ```bash
     # curl -v -H "Authentication: d1293c87-54e-13b-4fca-a727-6d76059d366b0" \
     "https://mpulse.soasta.com/concerto/mpulse/api/v2/SKH8G-XA4XU-7CEVY-J48GX-VBMJ4/summary?date=2017-10-10"
     ```
@@ -26,7 +26,7 @@ For more info read [here](https://community.akamai.com/docs/DOC-9096-mpulse-api-
 ### Examples
 There are example calls made through the mPulse API:
 
-```
+```bash
 # curl -H "Authentication: 2d9b2b03-aa4-139-4ad1-8bb9-d572084a73ec" \
 "https://mpulse.soasta.com/concerto/mpulse/api/v2/SKH8G-XA4XU-7CEVY-J48GX-VBMJ4/summary?date-comparator=Last3Hours&timer=PageLoad"
 {"median":"2939","moe":"422.1183940980747","n":"16","p95":"4199","p98":"4415"}
