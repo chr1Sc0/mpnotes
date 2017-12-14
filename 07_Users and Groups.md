@@ -1,5 +1,4 @@
 ### Users and Groups
-
 The users and groups can be configured at the "Administration" level in mPulse.
 
 ### General Properties
@@ -8,7 +7,6 @@ The properties of the "General" tab show the user identification fields like Use
 ![Users and Group](./images/users_general.png)
 
 ### User Privileges
-
 The user privileges could be:
   1. User Administrator: Allows a user to create, edit and delete user accounts
   2. Tenant Administrator: Allows a user to create, edit and delete tenants.
