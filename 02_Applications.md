@@ -17,7 +17,9 @@ The domain name of the application has to be added to monitor the application fr
 Once the application is created, a random API Key is generated to uniquely identify the application.
 
 ### Javascript Snippet
-The Javascript code snippet needs to be copied and instrument the page in the \<header> tag of the HTML documents of the web application to monitor.
+
+#### HTML5 Web Applications
+The boomerang javascript code snippet needs to be copied and instrument the page in the \<header> tag of the HTML documents of the web application to monitor.
 
 The snippet basically creates a hidden iframe and calls a function that loads the boomerang library from mpulse site, adds the js to the iframe HTML and then fires the anonymous function "()" when the "onload" event triggers:
 
@@ -42,12 +44,26 @@ try {
 })();
 ```
 
-### Application Configuration
+#### Single Page Applications
+
+Boomerang monitors Single Page App (SPA) navigations differently than how it monitors navigations on traditional websites.
+
+On traditional websites, the browser completes a full navigation for every page. During this navigation, the browser requests the page’s HTML, JavaScript, CSS, etc., from the server, and builds the page from these components. Boomerang monitors this entire process.
+
+On SPA websites, only the first page that the visitor loads is a full navigation. All subsequent navigations are handled by the SPA framework itself (i.e. AngularJS), where they dynamically pull in the content they need to render the new page. This is done without executing a full navigation from the browser’s point of view.
+
+In this case, you will need to add an additional snippet within your SPA, so Boomerang can hook into your SPA framework events and send beacons to mPulse.
+
+For more info about SPAs, check the following:
+http://docs.soasta.com/boomerang/#single-page-apps
+
+### mPulse Application Configuration
 There are other optional parameters that can configured when creating the application:
 
 **1. General Tab**
   - A/B Bucket:  Variable (free text) that can be used for A/B tagging.  A/B testing (also known as split testing or bucket testing) is a method of comparing two versions of a webpage or app against each other to determine which one performs better.
   - Development Server List: List of servers, domain or sites (comma separated) that I want to exclude beacons from. The information entered in this field is not counted into your mPulse data, and it does not appear on your Dashboards.
+  - Data Template: Overrides country/region templates from the Tenant settings. Can be set only if the user has the "Tenant Adminstrator" permissions.
   - Bandwith Test: This is for measuring user bandwith distribution charts. It requires downloading the images from mPulse for and placing them in some web accesible location of the target server
 
 ![General Tab](./images/app_general_tab.png)
